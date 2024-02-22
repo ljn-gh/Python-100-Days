@@ -7,7 +7,7 @@ Date: 2018-03-06
 """
 
 import os
-
+os.system('chcp 65001')
 
 
 def print_board(board):

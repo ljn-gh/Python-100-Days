@@ -1,10 +1,10 @@
 """
 集合的常用操作
-- 交集
-- 并集
-- 差集
-- 子集
-- 超集
+- 交集 &
+- 并集 |
+- 差集 -
+- 子集 a <= b a是否是b的子集 
+- 超集 a >= b a是否是b的超集
 
 Version: 0.1
 Author: 骆昊
@@ -19,21 +19,24 @@ def main():
     print(set2)
     set3 = set(range(1, 5))
     print(set1 & set2)
-    # print(set1.intersection(set2))
+    print(set1.intersection(set2))
     print(set1 | set2)
-    # print(set1.union(set2))
+    print(set1.union(set2))
     print(set1 - set2)
-    # print(set1.difference(set2))
+    print(set1.difference(set2))
     print(set1 ^ set2)
-    # print(set1.symmetric_difference(set2))
+    print(set1.symmetric_difference(set2))
     print(set2 <= set1)
-    # print(set2.issubset(set1))
+    print(set2.issubset(set1))
     print(set3 <= set1)
-    # print(set3.issubset(set1))
+    print(set3.issubset(set1))
     print(set1 >= set2)
-    # print(set1.issuperset(set2))
+    print(set1.issuperset(set2))
     print(set1 >= set3)
-    # print(set1.issuperset(set3))
+    print(set1.issuperset(set3))
+
+    set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+    print(set4)
 
 
 if __name__ == '__main__':

@@ -11,6 +11,8 @@ Date: 2018-03-06
 
 
 # 生成Fibonacci序列的生成器
+
+# yield 使用可以参考 https://zhuanlan.zhihu.com/p/98369264
 def fib(n):
     a, b = 0, 1
     for _ in range(n):
