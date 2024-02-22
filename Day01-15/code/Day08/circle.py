@@ -29,7 +29,7 @@ class Circle(object):
     def perimeter(self):
         return 2 * math.pi * self._radius
 
-    @property
+    #2@property
     def area(self):
         return math.pi * self._radius * self._radius
 
@@ -39,4 +39,4 @@ if __name__ == '__main__':
     small = Circle(radius)
     big = Circle(radius + 3)
     print('围墙的造价为: ￥%.1f元' % (big.perimeter * 115))
-    print('过道的造价为: ￥%.1f元' % ((big.area - small.area) * 65))
+    print('过道的造价为: ￥%.1f元' % ((big.area() - small.area()) * 65))
