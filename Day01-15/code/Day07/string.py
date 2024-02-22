@@ -16,8 +16,8 @@ print(str.capitalize())
 # print(str.index('shit'))
 
 
-a = 1;
-b = 2;
+a = 1
+b = 2
 a,b = b,3
 print(a,b)
 
