@@ -14,3 +14,17 @@ elif unit == 'cm' or unit == '厘米':
     print('%f厘米 = %f英寸' % (value, value / 2.54))
 else:
     print('请输入有效的单位')
+
+
+def main():
+    v = int(input('请输入'))
+    if v > 0:
+        print('%d大于0' % v)
+    elif v < 0:
+        print('%d小于0' % v)
+    else:
+        print('%d等于0' % v)
+
+
+if __name__ == '__main__':
+    main()
