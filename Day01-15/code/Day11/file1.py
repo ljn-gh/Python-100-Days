@@ -1,31 +1,33 @@
 """
 从文本文件中读取数据
-
-Version: 0.1
-Author: 骆昊
-Date: 2018-03-13
 """
 
-import time
 
-
-def main():
-    # 一次性读取整个文件内容
+def readFileAll():
     with open('致橡树.txt', 'r', encoding='utf-8') as f:
         print(f.read())
 
-    # 通过for-in循环逐行读取
-    with open('致橡树.txt', mode='r') as f:
-        for line in f:
-            print(line, end='')
-            time.sleep(0.5)
-    print()
 
-    # 读取文件按行读取到列表中
-    with open('致橡树.txt') as f:
+def readList():
+    with open('致橡树.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    print(lines)
-    
+        print(lines)
+
+
+def readLine():
+    try:
+        with open('致橡树.txt', 'r',encoding='utf-8') as f:
+            for line in f:
+                print(line, end='')
+    except FileNotFoundError:
+        print('无法打开指定的文件!')
+    except LookupError:
+        print('指定了未知的编码!')
+    except UnicodeDecodeError:
+        print('读取文件时解码错误!')
+    finally:
+        f.close()
 
 if __name__ == '__main__':
-    main()
+    while True:
+        mode = input('读取方式(all, line, list, e): ')

@@ -20,8 +20,8 @@ from matplotlib import pyplot
 
 import numpy
 
-
 def seq_search(items: list, elem) -> int:
+
     """顺序查找"""
     for index, item in enumerate(items):
         if elem == item:
