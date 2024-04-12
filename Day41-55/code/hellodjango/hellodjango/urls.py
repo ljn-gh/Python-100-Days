@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from first.views import show_index
-
+import app.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', show_index),
+    path('hello/', views.index),
+    path('insert/', views.insertUser),
 ]
