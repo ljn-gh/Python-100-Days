@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.index),
     path('insert/', views.insertUser),
+    path('users/',views.selectUser)
 ]
